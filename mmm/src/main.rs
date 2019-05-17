@@ -21,6 +21,11 @@ fn min_max(input: &Vec<i64>) -> (i64, i64) {
     return (to_sort[0], to_sort[to_sort.len()-1]);
 }
 
+fn sum(input: &Vec<i64>) -> i64 {
+    input.iter().sum()
+}
+
+
 fn main() -> io::Result<()> {
     let stdin = io::stdin();
     let mut input = Vec::new();
@@ -32,9 +37,11 @@ fn main() -> io::Result<()> {
     let mean = mean(&input);
     let median = median(&input);
     let (min_val, max_val) = min_max(&input);
+    let sum = sum(&input);
     println!("mean: {:?}", mean);
     println!("median: {:?}", median);
     println!("min: {:?}", min_val);
     println!("max: {:?}", max_val);
+    println!("sum: {:?}", sum);
     Ok(())
 }
