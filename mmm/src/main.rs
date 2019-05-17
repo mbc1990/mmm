@@ -31,8 +31,14 @@ fn main() -> io::Result<()> {
     let mut input = Vec::new();
     for line in stdin.lock().lines() {
         let line_input = line.expect("Unable to get stdin line");
-        let num = line_input.parse::<f64>().expect("Only f64 is currently supported");
-        input.push(num);
+        match line_input.parse::<f64>() {
+            Ok(parsed_val) => {
+                input.push(parsed_val);
+            },
+            Err(_) => {
+               println!("Ignoring bad input: {:?}", line_input);
+            }
+        }
     }
     let mean = mean(&input);
     let median = median(&input);
