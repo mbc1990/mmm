@@ -14,4 +14,4 @@ sum: 500000500000.0
 ```
 
 ## Limitations
-None, this program is perfect as long as you pass it a valid input
+None, this program is perfect as long as you pass it valid input
