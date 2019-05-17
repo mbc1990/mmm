@@ -5,14 +5,13 @@ Build like usual with `cargo build --release`
 
 ```
 shuf -i 1-1000000 -n 1000000000 | ./mmm
-mean: 500000
-median: 500001
-min: 1
-max: 1000000
+mean: 500000.5
+median: 500001.0
+min: 1.0
+max: 1000000.0
+sum: 500000500000.0
+
 ```
 
 ## Limitations
-Only supports integers right now and doesn't really have error handling sorry
-
-## Why is it mmm instead of mmmm
-Well originally it was going to be mean/median/mode but I decided mode was dumb and min/max were more useful but by that time I had already created the repository
+None, this program is perfect as long as you pass it a valid input
