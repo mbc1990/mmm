@@ -6,7 +6,7 @@ fn mean(input: &Vec<f64>) -> f64 {
     for num in input.iter() {
        sum += num;
     }
-    return (sum / input.len() as f64) as f64;
+    return sum / input.len() as f64;
 }
 
 fn median(input: &Vec<f64>) -> f64 {
